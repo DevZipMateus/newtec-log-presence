@@ -47,21 +47,21 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           <button
             onClick={() => scrollToSection("hero")}
-            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity"
             aria-label="Ir para o início"
           >
-            <img src={logo} alt="New Tec Log" className="h-12 w-auto" />
-            <span className="font-bold text-xl text-foreground hidden sm:inline">
+            <img src={logo} alt="New Tec Log" className="h-10 sm:h-12 w-auto" />
+            <span className="font-bold text-lg sm:text-xl text-foreground">
               New Tec Log
             </span>
           </button>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground/80 hover:text-primary font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                className="text-foreground/80 hover:text-primary font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full text-sm xl:text-base"
               >
                 {item.label}
               </button>
@@ -70,7 +70,8 @@ const Header = () => {
 
           <Button
             variant="default"
-            className="hidden md:inline-flex"
+            size="sm"
+            className="hidden lg:inline-flex"
             asChild
           >
             <a href="https://wa.me/5511442765155" target="_blank" rel="noopener noreferrer">
@@ -79,7 +80,7 @@ const Header = () => {
           </Button>
 
           <button
-            className="md:hidden"
+            className="lg:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Menu"
           >
@@ -88,12 +89,12 @@ const Header = () => {
         </div>
 
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t">
+          <nav className="lg:hidden py-4 border-t">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-3 text-foreground/80 hover:text-primary font-medium transition-colors"
+                className="block w-full text-left py-3 px-2 text-foreground/80 hover:text-primary font-medium transition-colors"
               >
                 {item.label}
               </button>

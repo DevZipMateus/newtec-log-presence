@@ -44,34 +44,34 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Nossos serviços</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+    <section id="services" className="py-12 sm:py-16 lg:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">Nossos serviços</h2>
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Soluções completas para manter sua operação funcionando com máxima eficiência
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {services.map((service, index) => (
             <Card
               key={index}
               className="border-none shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
-              <CardHeader>
-                <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                  <service.icon className="w-8 h-8 text-primary" />
+              <CardHeader className="p-5 sm:p-6">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4">
+                  <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
-                <CardTitle className="text-2xl">{service.title}</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl">{service.title}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-6">{service.description}</p>
-                <ul className="space-y-3">
+              <CardContent className="p-5 sm:p-6 pt-0">
+                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">{service.description}</p>
+                <ul className="space-y-2 sm:space-y-3">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                      <span className="text-sm">{feature}</span>
+                      <span className="text-xs sm:text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -80,22 +80,22 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="bg-accent rounded-2xl overflow-hidden">
+        <div className="bg-accent rounded-xl sm:rounded-2xl overflow-hidden">
           <div className="grid md:grid-cols-2 gap-0">
             <div
-              className="min-h-[300px] bg-cover bg-center"
+              className="min-h-[250px] sm:min-h-[300px] bg-cover bg-center"
               style={{ backgroundImage: `url(${partsImage})` }}
             />
-            <div className="p-8 md:p-12 flex flex-col justify-center">
-              <h3 className="text-3xl font-bold text-white mb-4">
+            <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">
                 Precisa de uma solução personalizada?
               </h3>
-              <p className="text-white/90 mb-8 leading-relaxed">
+              <p className="text-sm sm:text-base text-white/90 mb-6 sm:mb-8 leading-relaxed">
                 Nossa equipe está pronta para desenvolver a solução ideal para as necessidades específicas da sua empresa.
               </p>
               <Button
                 size="lg"
-                className="self-start"
+                className="w-full sm:w-auto sm:self-start"
                 asChild
               >
                 <a href="https://wa.me/5511442765155" target="_blank" rel="noopener noreferrer">
