@@ -7,7 +7,7 @@ const Services = () => {
   const services = [
     {
       icon: Package,
-      title: "Peças para empilhadeira",
+      title: "Peças e Acessórios para Empilhadeiras",
       description:
         "Reposição de peças multimarcas para empilhadeiras com qualidade garantida e pronta entrega.",
       features: [
