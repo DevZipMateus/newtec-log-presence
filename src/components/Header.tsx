@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
@@ -43,6 +43,28 @@ const Header = () => {
         isScrolled ? "bg-background/95 backdrop-blur-sm shadow-md" : "bg-background"
       }`}
     >
+      {/* Top bar com contatos */}
+      <div className="hidden lg:block bg-primary/5 border-b border-border/50">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-end gap-6 h-10 text-sm">
+            <a
+              href="mailto:contato@newteclog.com.br"
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Mail size={16} />
+              <span>contato@newteclog.com.br</span>
+            </a>
+            <a
+              href="tel:+551144276515"
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Phone size={16} />
+              <span>(11) 4427-6515</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <button
