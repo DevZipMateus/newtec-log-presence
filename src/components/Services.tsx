@@ -11,10 +11,11 @@ const Services = () => {
       description:
         "Reposição de peças multimarcas para empilhadeiras com qualidade garantida e pronta entrega.",
       features: [
-        "Peças originais e alternativas",
-        "Estoque disponível",
-        "Compatibilidade multimarcas",
+        "Peças genuínas e importadas",
+        "Estoque amplo",
+        "Intercompatibilidade",
         "Preços competitivos",
+        "Reposição de peças para empilhadeiras: HYSTER, TOYOTA, STILL, CLARK, HANGCHA, entre outras.",
       ],
     },
     {
