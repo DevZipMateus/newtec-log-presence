@@ -7,7 +7,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Endereço",
-      content: "TV Lúcio Veiga, 53 sala 3",
+      content: "Rua Lúcio Veiga, 53 sala 3",
       subtitle: "Centro - Santo André, SP - 09040-090",
     },
     {
