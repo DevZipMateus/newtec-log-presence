@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Mail, Phone } from "lucide-react";
+import { Menu, X, Mail, Phone, Home, Info, Briefcase, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
@@ -31,10 +31,10 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: "Início", id: "hero" },
-    { label: "Sobre", id: "about" },
-    { label: "Serviços", id: "services" },
-    { label: "Contato", id: "contact" },
+    { label: "Início", id: "hero", icon: Home },
+    { label: "Sobre", id: "about", icon: Info },
+    { label: "Serviços", id: "services", icon: Briefcase },
+    { label: "Contato", id: "contact", icon: MessageSquare },
   ];
 
   return (
@@ -102,7 +102,7 @@ const Header = () => {
           </Button>
 
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 hover:bg-primary/10 rounded-lg transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Menu"
           >
@@ -110,26 +110,85 @@ const Header = () => {
           </button>
         </div>
 
+        {/* Overlay */}
         {isMobileMenuOpen && (
-          <nav className="lg:hidden py-4 border-t">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-3 px-2 text-foreground/80 hover:text-primary font-medium transition-colors"
-              >
-                {item.label}
-              </button>
-            ))}
-            <Button
-              variant="default"
-              className="w-full mt-4"
-              asChild
-            >
-              <a href="https://wa.me/5511442765155" target="_blank" rel="noopener noreferrer">
-                Fale conosco
-              </a>
-            </Button>
+          <div
+            className="lg:hidden fixed inset-0 bg-background/80 backdrop-blur-sm z-40 animate-fade-in"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+        )}
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <nav className="lg:hidden fixed top-0 right-0 bottom-0 w-[280px] bg-background shadow-2xl z-50 animate-slide-in-right border-l border-border">
+            <div className="flex flex-col h-full">
+              {/* Menu Header */}
+              <div className="flex items-center justify-between p-6 border-b border-border">
+                <div className="flex items-center gap-2">
+                  <img src={logo} alt="New Tec Log" className="h-8 w-auto" />
+                  <span className="font-bold text-base">New Tec Log</span>
+                </div>
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-2 hover:bg-primary/10 rounded-lg transition-colors"
+                  aria-label="Fechar menu"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+
+              {/* Menu Items */}
+              <div className="flex-1 overflow-y-auto py-6 px-4">
+                <div className="space-y-2">
+                  {navItems.map((item, index) => (
+                    <button
+                      key={item.id}
+                      onClick={() => scrollToSection(item.id)}
+                      className="flex items-center gap-3 w-full text-left py-3 px-4 text-foreground/80 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-all group animate-fade-in"
+                      style={{ animationDelay: `${index * 50}ms` }}
+                    >
+                      <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                      <span>{item.label}</span>
+                    </button>
+                  ))}
+                </div>
+
+                {/* Contact Info in Mobile Menu */}
+                <div className="mt-8 space-y-3 px-4">
+                  <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-3">
+                    Contato
+                  </div>
+                  <a
+                    href="tel:+551144276515"
+                    className="flex items-center gap-3 text-sm text-foreground/80 hover:text-primary transition-colors"
+                  >
+                    <Phone size={16} />
+                    <span>(11) 4427-6515</span>
+                  </a>
+                  <a
+                    href="mailto:contato@newteclog.com.br"
+                    className="flex items-center gap-3 text-sm text-foreground/80 hover:text-primary transition-colors"
+                  >
+                    <Mail size={16} />
+                    <span>contato@newteclog.com.br</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Menu Footer */}
+              <div className="p-4 border-t border-border">
+                <Button
+                  variant="default"
+                  className="w-full"
+                  asChild
+                >
+                  <a href="https://wa.me/5511442765155" target="_blank" rel="noopener noreferrer">
+                    <MessageSquare className="mr-2 w-4 h-4" />
+                    Fale conosco
+                  </a>
+                </Button>
+              </div>
+            </div>
           </nav>
         )}
       </div>
