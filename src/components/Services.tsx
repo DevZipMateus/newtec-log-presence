@@ -37,8 +37,8 @@ const Services = () => {
         "Equipamentos modernos para limpeza industrial com excelente custo-benefício.",
       features: [
         "Equipamentos modernos",
-        "Manutenção incluída",
-        "Planos flexíveis",
+        "Manutenção inclusa",
+        "Planos de locação com produto e material incluso",
         "Suporte técnico",
       ],
     },
