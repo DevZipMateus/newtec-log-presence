@@ -41,7 +41,7 @@ const About = () => {
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">Sobre a New Tec Log</h2>
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
-            Fundada em 2010, atuamos há mais de 14 anos no mercado de empilhadeiras e equipamentos de movimentação
+            Fundada em 2010, atuamos há mais de 15 anos no mercado de empilhadeiras e lavadoras de piso. Evoluímos com o mercado, trazendo soluções modernas inteligentes, contando com uma equipe técnica qualificada, sempre em busca de melhorias para nossos clientes.
           </p>
         </div>
 
