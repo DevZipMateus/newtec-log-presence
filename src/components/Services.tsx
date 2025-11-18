@@ -1,4 +1,4 @@
-import { Wrench, Package, Droplet } from "lucide-react";
+import { Wrench, Package, Droplet, Truck } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import partsImage from "@/assets/parts-service.jpg";
@@ -40,6 +40,17 @@ const Services = () => {
         "Manutenção inclusa",
         "Planos de locação com produto e material incluso",
         "Suporte técnico",
+      ],
+    },
+    {
+      icon: Truck,
+      title: "Locação de Empilhadeiras",
+      description:
+        "Equipamentos modernos com excelente custo benefício.",
+      features: [
+        "Equipamentos elétricos e a combustão",
+        "Manutenção inclusa",
+        "Suporte Técnico",
       ],
     },
   ];
