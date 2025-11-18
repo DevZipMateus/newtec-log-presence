@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, MessageCircle, Mail, Clock } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -11,7 +11,7 @@ const Contact = () => {
       subtitle: "Centro - Santo André, SP - 09040-090",
     },
     {
-      icon: Phone,
+      icon: MessageCircle,
       title: "Telefone",
       content: "(11) 4427-6515",
       subtitle: "Segunda a sexta",
