@@ -19,7 +19,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "reneadm.teclog@gmail.com",
+      content: "newteclog@newteclog.com.br",
       subtitle: "Resposta em até 24h",
     },
     {
