@@ -110,7 +110,7 @@ const Services = () => {
                 className="text-sm sm:text-base lg:text-lg w-full sm:w-auto sm:self-start px-6 sm:px-8"
                 asChild
               >
-                <a href="https://wa.me/5511442765155" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/551144276515" target="_blank" rel="noopener noreferrer">
                   Solicitar orçamento
                 </a>
               </Button>
