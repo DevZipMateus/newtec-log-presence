@@ -96,7 +96,7 @@ const Header = () => {
             className="hidden lg:inline-flex"
             asChild
           >
-            <a href="https://wa.me/5511442765155" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/551144276515" target="_blank" rel="noopener noreferrer">
               Fale conosco
             </a>
           </Button>
@@ -182,7 +182,7 @@ const Header = () => {
                   className="w-full"
                   asChild
                 >
-                  <a href="https://wa.me/5511442765155" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/551144276515" target="_blank" rel="noopener noreferrer">
                     <MessageSquare className="mr-2 w-4 h-4" />
                     Fale conosco
                   </a>
